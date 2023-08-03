@@ -1,0 +1,73 @@
+body {
+  font-family: cursive;
+  color: #54bab9;
+}
+.container {
+  margin: 20px auto;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #777;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#formOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myButton {
+  width: fit-content;
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #54bab9;
+  color: white;
+  border: 1px solid #18978f;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttons .myButton {
+  width: 100vw;
+}
+input {
+  border: none;
+  border-bottom: 1px solid #777;
+  width: 100%;
+}
+
+input:focus {
+  border-bottom: 1.5px solid #18978f;
+  outline: none;
+}
+
+h1,
+h2 {
+  color: #18978f;
+}
+
+.box {
+  padding: 5px;
+  text-align: center;
+  background-color: #54bab9;
+  color: white;
+  margin: 2.5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.strike {
+  text-decoration: line-through;
+  background-color: #e44d55;
+}

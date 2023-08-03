@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./style/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="main-page">
+      <div class="left-side">
+        <div class="head-icon">
+          <div class="icon" title="Lists">
+            <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="quick-shortcuts">
+          <div class="shortcuts">
+            <div class="shortcut icon-text list class1">
+              <i class="fa fa-sun-o" aria-hidden="true"></i>
+              <p class="name">My day</p>
+            </div>
+            <div class="shortcut icon-text list class2">
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <p class="name">Important</p>
+            </div>
+            <div class="shortcut icon-text list class3">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <p class="name">Next 7 days</p>
+            </div>
+            <div class="shortcut icon-text list class4">
+              <i class="fa fa-list-ul" aria-hidden="true"></i>
+              <p class="name">All my tasks</p>
+            </div>
+          </div>
+          <div class="lists">
+            <div class="default-list icon-text list class5">
+              <i class="fa fa-list-ul" aria-hidden="true"></i>
+              <p class="list-name">Home</p>
+            </div>
+            <div class="user-lists"></div>
+          </div>
+        </div>
+        <div class="add-new-list icon-input">
+          <!-- <div class="add-icon"></div> -->
+          <form class="form01">
+            <button
+              type="submit"
+              class="myButton add-icon"
+              id="add-button"
+            ></button>
+            <input
+              type="text"
+              name="newList"
+              id="newList"
+              placeholder="Add new list"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="nav">
+          <div class="current-list">
+            <input type="text" name="" id="" />
+            <!-- <p>My day |</p> -->
+            <div class="sort-icon" title="sort">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </div>
+            <div class="sort-options" style="display: none">
+              <div class="dueDateSort">
+                <div></div>
+                Due Date
+              </div>
+              <div class="creationDateSort">
+                <div></div>
+                Creation Date
+              </div>
+              <div class="alphabeticalSort">
+                <div class="active-sort-mode"></div>
+                Alphabetical
+              </div>
+            </div>
+            <div class="more-options" title="List options menu">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </div>
+            <div class="list-options" style="display: none">
+              <div class="renameList main-opt">Rename List</div>
+              <div class="setTheme main-opt">
+                Theme
+                <div class="colors" style="display: none">
+                  <div class="default"></div>
+                  <div class="red"></div>
+                  <div class="green"></div>
+                  <div class="yellow"></div>
+                </div>
+              </div>
+              <div class="deleteList main-opt">Delete List</div>
+            </div>
+          </div>
+          <div class="showAll" style="display: none" title="show all tasks">
+            show all
+          </div>
+          <div class="search-icon">
+            <p>search</p>
+            <i class="fa fa-search" aria-hidden="true" title="Search"></i>
+            <form action="" style="width: fit-content; height: fit-content">
+              <input
+                type="text"
+                name="textForSearch"
+                id="search"
+                placeholder="Search for task"
+                class="input-to-search"
+                style="padding: 10px 0px"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="container">
+          <div class="box">
+            <div class="tasks"></div>
+            <div class="add-new-task icon-input">
+              <form class="form01">
+                <button
+                  type="submit"
+                  class="myButton add-icon"
+                  id="add-button-task"
+                ></button>
+                <input
+                  type="text"
+                  name="newTask"
+                  id="newTask"
+                  placeholder="Add new task"
+                />
+              </form>
+            </div>
+          </div>
+
+          <div class="details-box" style="display: none">
+            <div class="head">
+              <div class="x-icon" id="close" title="close"></div>
+            </div>
+            <div class="details">
+              <div class="name">
+                <form action="">
+                  <input type="text" name="" id="" value="my test task" />
+                </form>
+                <div class="important" title="set as important">
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="short">
+                <!-- <div class="creation-date">creation : 13/3/2023</div> -->
+                <label for="dueDate" class="due-date">due date</label>
+                <input
+                  type="date"
+                  class="due-date"
+                  id="dueDate"
+                  name="dueDate"
+                  value="1990-01-01"
+                  title="Pick a date"
+                />
+                <!-- <div class="due-date">due date : 15-3-2023</div> -->
+              </div>
+              <div class="note">
+                <label for="note">note</label>
+                <textarea
+                  name="note"
+                  id="note"
+                  cols="30"
+                  rows="10"
+                  placeholder="Insert your notes here"
+                ></textarea>
+              </div>
+              <div class="attachment">
+                <p>ATTACHMENTS</p>
+                <div>
+                  <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Click to add / drop your
+                    file here
+                  </label>
+                  <input id="file-upload" type="file" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
